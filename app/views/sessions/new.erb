@@ -1,0 +1,16 @@
+<h4>log in</h4>
+
+
+<%= form_for :user, url: '/login' do |f|%>
+
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+
+    <%= f.submit 'log in' %>
+<% end%><br>
+
+Don't have an account?
+<%= link_to(controller: 'users', action: 'new') { 'sign up'} %>
